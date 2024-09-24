@@ -3,7 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	Global.item_amount = 1
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -15,3 +15,7 @@ func _process(delta):
 
 func _on_timer_timeout():
 	$Item_amount_label.visible = false
+
+func _input(event: InputEvent) -> void:
+	if Input.is_action_pressed("Quit"):
+		get_tree().reload_current_scene() #Reloads game from start
