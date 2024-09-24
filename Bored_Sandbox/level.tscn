@@ -1,0 +1,130 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtckykdmp5k0"]
+
+[ext_resource type="Script" path="res://level.gd" id="1_4mtba"]
+[ext_resource type="Texture2D" uid="uid://btb7ps2gfmlap" path="res://icon.svg" id="1_mpdvf"]
+[ext_resource type="PackedScene" uid="uid://dmlkwxrvtsd1w" path="res://replicating_ball.tscn" id="2_cndda"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t820w"]
+size = Vector2(20, 12)
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_4mtba")
+
+[node name="Replicating ball" parent="." instance=ExtResource("2_cndda")]
+position = Vector2(0, 2)
+
+[node name="Scene" type="Node2D" parent="."]
+
+[node name="Walls" type="Node2D" parent="Scene"]
+
+[node name="Wall3" type="Node2D" parent="Scene/Walls"]
+position = Vector2(887, 2.98023e-08)
+rotation = -1.5708
+scale = Vector2(0.559998, -1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Scene/Walls/Wall3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene/Walls/Wall3/StaticBody2D"]
+position = Vector2(0, 317)
+scale = Vector2(57.6, 1)
+shape = SubResource("RectangleShape2D_t820w")
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene/Walls/Wall3"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(2.08165e-12, 317)
+scale = Vector2(9, 0.1)
+texture = ExtResource("1_mpdvf")
+
+[node name="Area2D" type="Area2D" parent="Scene/Walls/Wall3" groups=["Edge"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene/Walls/Wall3/Area2D"]
+position = Vector2(0, 317)
+scale = Vector2(57.6, 1)
+shape = SubResource("RectangleShape2D_t820w")
+
+[node name="Wall4" type="Node2D" parent="Scene/Walls"]
+position = Vector2(-1, -635)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Scene/Walls/Wall4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene/Walls/Wall4/StaticBody2D"]
+position = Vector2(0, 317)
+scale = Vector2(57.6, 1)
+shape = SubResource("RectangleShape2D_t820w")
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene/Walls/Wall4"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(2.08165e-12, 317)
+scale = Vector2(9, 0.1)
+texture = ExtResource("1_mpdvf")
+
+[node name="Area2D" type="Area2D" parent="Scene/Walls/Wall4" groups=["Edge"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene/Walls/Wall4/Area2D"]
+position = Vector2(0, 317)
+scale = Vector2(57.6, 1)
+shape = SubResource("RectangleShape2D_t820w")
+
+[node name="Wall" type="Node2D" parent="Scene/Walls"]
+position = Vector2(0, 3)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Scene/Walls/Wall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene/Walls/Wall/StaticBody2D"]
+position = Vector2(0, 317)
+scale = Vector2(57.6, 1)
+shape = SubResource("RectangleShape2D_t820w")
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene/Walls/Wall"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(2.08165e-12, 317)
+scale = Vector2(9, 0.1)
+texture = ExtResource("1_mpdvf")
+
+[node name="Area2D" type="Area2D" parent="Scene/Walls/Wall" groups=["Edge"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene/Walls/Wall/Area2D"]
+position = Vector2(0, 317)
+scale = Vector2(57.6, 1)
+shape = SubResource("RectangleShape2D_t820w")
+
+[node name="Wall2" type="Node2D" parent="Scene/Walls"]
+position = Vector2(-253, 4)
+rotation = -1.57079
+scale = Vector2(0.559998, -1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Scene/Walls/Wall2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene/Walls/Wall2/StaticBody2D"]
+position = Vector2(0, 317)
+scale = Vector2(57.6, 1)
+shape = SubResource("RectangleShape2D_t820w")
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene/Walls/Wall2"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(2.08165e-12, 317)
+scale = Vector2(9, 0.1)
+texture = ExtResource("1_mpdvf")
+
+[node name="Area2D" type="Area2D" parent="Scene/Walls/Wall2" groups=["Edge"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene/Walls/Wall2/Area2D"]
+position = Vector2(0, 317)
+scale = Vector2(57.6, 1)
+shape = SubResource("RectangleShape2D_t820w")
+
+[node name="Camera2D" type="Camera2D" parent="Scene"]
+
+[node name="Item_amount_label" type="Label" parent="."]
+visible = false
+offset_left = -265.0
+offset_top = -57.0
+offset_right = -138.0
+offset_bottom = -34.0
+scale = Vector2(4.12, 4.12)
+text = "Ball Amount 999"
+
+[node name="Timer" type="Timer" parent="Item_amount_label"]
+one_shot = true
+
+[connection signal="timeout" from="Item_amount_label/Timer" to="." method="_on_timer_timeout"]

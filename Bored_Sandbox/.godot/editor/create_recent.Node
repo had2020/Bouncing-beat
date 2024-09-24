@@ -1,0 +1,10 @@
+Timer
+Label
+AudioStreamPlayer2D
+Node2D
+Area2D
+Sprite2D
+CollisionShape2D
+RigidBody2D
+Camera2D
+StaticBody2D
