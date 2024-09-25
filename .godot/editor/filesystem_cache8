@@ -1,12 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1727196981
+::res://::1727282279
 global.gd::GDScript::-1::1727112648::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::3724043808656676843::1726870330::1727196906::1::::<><>::
-level.gd::GDScript::-1::1727113404::0::1::::<>Node2D<>::
-level.tscn::PackedScene::249930276327229309::1727196913::0::1::::<><>::res://level.gd<>uid://btb7ps2gfmlap::::res://icon.svg<>uid://dmlkwxrvtsd1w::::res://replicating_ball.tscn
-replicating_ball.gd::GDScript::-1::1727130687::0::1::::<>RigidBody2D<>::
-replicating_ball.tscn::PackedScene::8024884022702896182::1727130695::0::1::::<><>::uid://btb7ps2gfmlap::::res://icon.svg<>res://replicating_ball.gd<>uid://dkur5hpij0okg::::res://assets/sounds/beep1.wav
-scaling_ball.tscn::PackedScene::152739357266299608::1727196981::0::1::::<><>::res://replicating_ball.gd<>uid://btb7ps2gfmlap::::res://icon.svg<>uid://dkur5hpij0okg::::res://assets/sounds/beep1.wav
+level.gd::GDScript::-1::1727198292::0::1::::<>Node2D<>::
+level.tscn::PackedScene::249930276327229309::1727198478::0::1::::<><>::res://level.gd<>uid://btb7ps2gfmlap::::res://icon.svg<>uid://dmlkwxrvtsd1w::::res://replicating_ball.tscn
+replicating_ball.gd::GDScript::-1::1727198254::0::1::::<>RigidBody2D<>::
+replicating_ball.tscn::PackedScene::8024884022702896182::1727198479::0::1::::<><>::uid://btb7ps2gfmlap::::res://icon.svg<>res://replicating_ball.gd<>uid://dkur5hpij0okg::::res://assets/sounds/beep1.wav
 ::res://assets/::1727111178
 ::res://assets/sounds/::1727196906
 beep1.wav::AudioStreamWAV::7903524196447026090::1727111175::1727196906::1::::<><>::
